@@ -1,0 +1,55 @@
+<mat-toolbar>
+    <mat-toolbar-row class="justify-content-between">
+        <button mat-icon-button  (click)="togglesidebar()"><mat-icon>menu</mat-icon></button>
+        
+
+        <span class="spacer"></span>
+       
+            
+        
+        
+          <button mat-button [matMenuTriggerFor]="country" ><img src="assets/images/usflag.png" width="25px" height="15px" style="margin-right: 10px;"></button>
+         
+      
+        <button mat-button [matMenuTriggerFor]="notificationMenu" ><mat-icon>notifications</mat-icon></button>
+        <button mat-button ><mat-icon>fullscreen</mat-icon></button>
+        <button mat-button ><mat-icon>sunny</mat-icon></button>
+        <button mat-button class="img" [matMenuTriggerFor]="menu"><img  class='img' src="assets/images/image1.jpg" width="20%" alt=""><mat-icon>keyboard_arrow_down</mat-icon></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="./extrapages"><mat-icon>image</mat-icon>Gallery</button>
+            <button mat-menu-item routerLink="./kanban"><mat-icon>assignment</mat-icon>Kanban</button>
+            <button mat-menu-item routerLink="/login"><mat-icon>lock_screen </mat-icon>LockScreen</button>
+            <button mat-menu-item><mat-icon>exit_to_app</mat-icon>Logout</button>
+        
+
+        </mat-menu>
+        <mat-menu #notificationMenu="matMenu">
+            <h6>Today</h6>
+            <button mat-menu-item><mat-icon>message</mat-icon>DataCorp</button>
+            <p>Caleb Flakelar commented on Admin</p>
+            <button mat-menu-item><mat-icon>person</mat-icon>Admin</button>
+            <p>New Users Registerd</p>
+            <button mat-menu-item><mat-icon>message</mat-icon>Cristina Pridme</button>
+            <p>Hi, How are you What About our Next meet</p>
+            <h6>Yesterday</h6>
+            <button mat-menu-item><img class="img" src="assets/images/image3.jpg">DataCorp</button>
+            <button mat-menu-item><img class="img" src="assets/images/image2.jpg">KarenRobinson</button>
+        </mat-menu>
+        
+        <mat-menu #country="matMenu"  #value>
+            
+        <button mat-menu-item  (click)="value"><img src="assets/images/flag2.png" width="25px" height="15px" style="margin-right: 10px;">UK</button>
+            <button mat-menu-item><img src="assets/images/flag3.png"  width="25px" height="15px" style="margin-right: 10px;">Germany</button>
+            <button mat-menu-item ><img src="assets/images/jordan.jfif"  width="25px" height="15px" style="margin-right: 10px;">Jordan</button>
+       
+        </mat-menu>  
+        
+        
+
+    
+    </mat-toolbar-row>
+
+
+</mat-toolbar>
+
+

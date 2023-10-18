@@ -1,0 +1,80 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <mat-card>
+                
+                <mat-card-title>3967</mat-card-title>
+                <mat-card-subtitle>Total Tickets</mat-card-subtitle>
+                <button><mat-icon>label</mat-icon></button>
+                <mat-card-content></mat-card-content>
+            </mat-card>
+        </div>
+            <div class="col-sm-3">
+            <mat-card>
+                   
+                <mat-card-title>3967</mat-card-title>
+                <mat-card-subtitle>Pending Tickets</mat-card-subtitle>
+                <button><mat-icon>alarm</mat-icon></button>
+                <mat-card-content></mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-sm-3">
+            <mat-card>
+                
+                <mat-card-title>3967</mat-card-title>
+                <mat-card-subtitle>Closed Tickets</mat-card-subtitle>
+                <button><mat-icon>check_circle</mat-icon></button>
+                <mat-card-content></mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-sm-3">
+            <mat-card>
+                
+                <mat-card-title>3967</mat-card-title>
+                <mat-card-subtitle>Deleted Tickets</mat-card-subtitle>
+                <button mat-button><mat-icon>delete</mat-icon></button>
+                <mat-card-content></mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <!-- <div class="form-area">
+        <h2></h2>
+        <form #usersForm="ngForm" (ngSubmit)="onUserCreate(usersForm.value)">
+        <label for="">Id</label>
+        <input type="text" name="id" ngModel>
+        <label for="">Name</label>
+        <input type="text" name="name" ngModel>
+        <label for="">UserName</label>
+        <input type="text" name="username" ngModel>
+        <label for="">Email</label>
+        <input type="text" name="email" ngModel>
+        <input type="submit" value="Add Product">
+    </form>
+    </div>
+    -->
+
+    <input type="submit" value="Add Customers">
+    <table class="table mt-3" >
+        <thead >
+            <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Email</th>
+            <th>Address</th>
+            <th>Phone No</th>
+         </tr>
+        </thead>
+        <tbody *ngFor="let item of users">
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.username}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.address.street}},{{item.address.city}}</td>
+                <td>{{item.phone}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,86 @@
+<div class="row">
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="d-flex">
+                <img src="" alt="">
+                <h3 class="card-header">Document</h3>
+                <h5 class="text-width-unbold">Using 25% of storage</h5>
+            </div>
+            <div class="d-flex">
+                <ul class="row">
+                    <li>3 GB</li>
+                    <li>400 Files</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="d-flex">
+                <img src="" alt="">
+                <h3 class="card-header">Music</h3>
+                <h5 class="text-width-unbold">Using 15% of storage</h5>
+            </div>
+            <div class="d-flex">
+                <ul class="row">
+                    <li>1.5 GB</li>
+                    <li>300 Files</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="d-flex">
+                <img src="" alt="">
+                <h3 class="card-header">Apps</h3>
+                <h5 class="text-width-unbold">Using 50% of storage</h5>
+            </div>
+            <div class="d-flex">
+                <ul class="row">
+                    <li>39 GB</li>
+                    <li>25 Apps</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="d-flex">
+                <img src="" alt="">
+                <h3 class="card-header">Videos</h3>
+                <h5 class="text-width-unbold">Using 10% of storage</h5>
+            </div>
+            <div class="d-flex">
+                <ul class="row">
+                    <li>10 GB</li>
+                    <li>9 Videos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <table class="table mt-5 mx-5">
+        <thead >
+            <h3 class="text-width-bold">Recent Files</h3>
+            <tr>
+                <th scope="col">File Name</th>
+                <th scope="col">Last Modified</th>
+                <th scope="col">File Size</th>
+                <th scope="col">Owner</th>
+            </tr>
+        </thead>
+        <tbody  *ngFor="let item of files">
+            <tr >
+                <td>{{item.filename}}</td>
+                <td>{{item.lastmodified}}</td>
+                <td>{{item.filesize}}</td>
+                <td>{{item.owner}}</td>
+
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
